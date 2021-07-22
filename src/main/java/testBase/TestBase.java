@@ -11,9 +11,12 @@ import org.testng.annotations.BeforeMethod;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pageObjects.CheckInVisitorPageObjects;
+import pageObjects.CheckedInVisitorsPageObjects;
 import pageObjects.CheckedOutVisitorsPageObjects;
 import pageObjects.DashboardPageObjects;
 import pageObjects.LoginPageObjects;
+import pageObjects.ManageBuildingsPageObjects;
+import pageObjects.OverdueCheckedInPageObjects;
 import reusableComponents.PropertiesOperations;
 
 public class TestBase extends ObjectsRepo {
@@ -51,6 +54,9 @@ public class TestBase extends ObjectsRepo {
 			checkinvisitor = new CheckInVisitorPageObjects();
 			login = new LoginPageObjects();
 			checkedout = new CheckedOutVisitorsPageObjects();
+			checkedIn = new CheckedInVisitorsPageObjects();
+			overdue = new OverdueCheckedInPageObjects();
+			building = new ManageBuildingsPageObjects();
 		}
 		
 		//ending test close window 

@@ -18,7 +18,17 @@ public class DashboardPageObjects extends TestBase {
 	@FindBy(xpath="//*[@id=\"main_navbar\"]/div[2]/perfect-scrollbar/div/div[1]/div[2]/ul[3]/li/a")
 	WebElement li_checkedOutVisitor;
 	
-	 //constructor- use init element method
+	@FindBy(xpath="//*[@id=\"main_navbar\"]/div[2]/perfect-scrollbar/div/div[1]/div[2]/ul[2]/li/a")
+	WebElement li_checkedInVisitor;
+	
+	@FindBy(xpath="//*[@id=\"main_navbar\"]/div[2]/perfect-scrollbar/div/div[1]/div[2]/ul[4]/li/a")
+	WebElement li_overdueChekedIn;
+	
+	@FindBy(xpath="//*[@id=\"main_navbar\"]/div[2]/perfect-scrollbar/div/div[1]/div[1]/ul[4]/li/a")
+	WebElement li_manageBuildings;
+	
+	
+//constructor- use init element method
         public DashboardPageObjects  () {
     	PageFactory.initElements(driver, this);
     	
@@ -35,5 +45,14 @@ public class DashboardPageObjects extends TestBase {
     
     public void clickChekedOutVisitors() {
     	li_checkedOutVisitor.click();
+    }
+    public void clickCheckedInVisitors() {
+    	li_checkedInVisitor.click();
+    }
+    public void clickOverdueCheckedInVisitors() {
+    	li_overdueChekedIn.click();
+    }
+    public void clickManageBuildings() {
+    	li_manageBuildings.click();
     }
 }

@@ -13,11 +13,73 @@ import testBase.TestBase;
 
 public class EndToEndTest_visitorManagement extends TestBase{
 	
-	
 	ExcelComponents excel = new ExcelComponents("visitorManage");
 	ExcelComponents exChekout = new ExcelComponents("CheckedOut");
-	ExcelComponents exChekIn = new ExcelComponents("CheckInVisitors");
+	ExcelComponents exChekIn = new ExcelComponents("CheckInVisitors"); 
+	ExcelComponents exChekedIn = new ExcelComponents("CheckedIn");
+	ExcelComponents exOverdue = new ExcelComponents("Overdue");
+	ExcelComponents exBuilding = new ExcelComponents("manageBuilding");
 	
+	
+	//login
+		@Test(dataProvider = "loginData")
+		public void visitorManagemet_Login(Object obj) throws Exception {
+	        HashMap<String, String>  testData = (HashMap<String, String>) obj;
+			System.out.println("testdata" +testData);
+			test.log(Status.INFO, "Test data execution from"+ testData);
+			dashboard.clickLoginLink();
+			login.enterLoginData(testData);
+			login.clickloginButton();
+		}
+		
+	
+	//manage buildings
+	@Test(dataProvider = "manageBuildings")
+	public void visitmanagement_ManageBuildings(Object obj5)throws Exception{
+		HashMap<String, String>  testData5 = (HashMap<String, String>) obj5;
+		System.out.println("testdata4" +testData5);
+		test.log(Status.INFO, "Test data execution from"+ testData5);
+		dashboard.clickManageBuildings();
+ 	    building.enterDataForSearchBuilding(testData5);
+        building.clicksearchButton();
+		
+	}
+	
+	@Test(dataProvider = "manageBuildings1" )
+	public void VisitorManagement_AddBuilding(Object obj6)throws Exception{
+		HashMap<String, String>  testData6 = (HashMap<String, String>) obj6;
+		System.out.println("testdata4" +testData6);
+    	test.log(Status.INFO, "Test data execution from"+ testData6);
+    	dashboard.clickManageBuildings();
+    	building.clickaddBuildingButton();
+    	building.enterDataforAddBuilding(testData6);
+     	building.clickAddButton();
+	}
+	//overdue visitors
+		@Test(dataProvider = "overduecheckedInVisitor")
+		public void visitManagement_OverdueCheckedIn(Object obj4)throws Exception{
+			HashMap<String, String>  testData4 = (HashMap<String, String>) obj4;
+			System.out.println("testdata4" +testData4);
+			test.log(Status.INFO, "Test data execution from"+ testData4);
+			dashboard.clickOverdueCheckedInVisitors();
+			overdue.enterCheckedIndata(testData4);
+			overdue.clickCheckedSearchButton();
+			overdue.clickCheckoutButton();
+	}
+		
+	
+	
+	//checked in visitors
+	@Test(dataProvider = "checkedInVisitor")
+	public void visitorManagement_CheckedInVisitors(Object obj3) throws Exception{
+		HashMap<String, String>  testData3 = (HashMap<String, String>) obj3;
+		System.out.println("testdata3" +testData3);
+		test.log(Status.INFO, "Test data execution from"+ testData3);
+		dashboard.clickCheckedInVisitors();
+		checkedIn.enterCheckedIndata(testData3);
+		checkedIn.clickCheckedSearchButton();
+		checkedIn.clickCheckoutButton();
+	}
 	
 	//check in visitors
 	@Test(dataProvider = "checkInVisitor")
@@ -41,18 +103,11 @@ public class EndToEndTest_visitorManagement extends TestBase{
 		checkedout.clickCheckedSearchButton();
 	}
 
-	//login
-	@Test(dataProvider = "loginData")
-	public void visitorManagemet_Login(Object obj) throws Exception {
-        HashMap<String, String>  testData = (HashMap<String, String>) obj;
-		System.out.println("testdata" +testData);
-		test.log(Status.INFO, "Test data execution from"+ testData);
-		dashboard.clickLoginLink();
-		login.enterLoginData(testData);
-		login.clickloginButton();
-	}
 	
 	
+	
+	
+                                                           // Data providers for pages 
 		
 	//data provider method for login page
 	@DataProvider (name="loginData")
@@ -90,7 +145,56 @@ public class EndToEndTest_visitorManagement extends TestBase{
 					return ob;
 					 
 				 }
-
+	  //data provider method for checked in visitor page
+       @DataProvider (name="checkedInVisitor")
+	   public Object [][] testDataSupplier3() throws Exception {
+		 Object[][] ob = new Object[exChekedIn.getRowCount()][1];
+			for (int i = 1; i <exChekedIn.getRowCount(); i++) {
+				HashMap<String, String> testData3 =exChekedIn.getTestDataInMap(i);
+				ob[i-1][0] = testData3;
+			}
+					
+			return ob;
+					 
+			}
+     
+     //data provider method for overdue checked in visitor page
+      @DataProvider (name="overduecheckedInVisitor")
+	   public Object [][] testDataSupplier4() throws Exception {
+		 Object[][] ob = new Object[exOverdue.getRowCount()][1];
+			for (int i = 1; i <exOverdue.getRowCount(); i++) {
+				HashMap<String, String> testData4 =exOverdue.getTestDataInMap(i);
+				ob[i-1][0] = testData4;
+			}
+					
+			return ob;
+					 
+			}
+       
+     //data provider method for manage building page
+       @DataProvider (name="manageBuildings")
+	   public Object [][] testDataSupplier5() throws Exception {
+		 Object[][] ob = new Object[exBuilding.getRowCount()][1];
+			for (int i = 1; i <exBuilding.getRowCount(); i++) {
+				HashMap<String, String> testData5 =exBuilding.getTestDataInMap(i);
+				ob[i-1][0] = testData5;
+			}
+					
+			return ob;
+					 
+			}
+       @DataProvider (name="manageBuildings1")
+	   public Object [][] testDataSupplier6() throws Exception {
+		 Object[][] ob = new Object[exBuilding.getRowCount()][1];
+			for (int i = 1; i <exBuilding.getRowCount(); i++) {
+				HashMap<String, String> testData6 =exBuilding.getTestDataInMap(i);
+				ob[i-1][0] = testData6;
+			}
+					
+			return ob;
+					 
+			}
+	
 	
 
 

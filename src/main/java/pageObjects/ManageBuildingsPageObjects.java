@@ -1,7 +1,10 @@
 package pageObjects;
 
+import java.util.HashMap;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import testBase.TestBase;
 
@@ -64,8 +67,42 @@ public class ManageBuildingsPageObjects extends TestBase {
     @FindBy(xpath="//*[@id=\"building-updatebtn\"]")
    	WebElement btn_building_update;
     
+  
+    public ManageBuildingsPageObjects()throws Exception {
+		PageFactory.initElements(driver, this);
+     }
+    	
+    	
+   //testing admin can search building
+   	 public void enterDataForSearchBuilding(HashMap<String, String> testData5) throws Exception {
+            input_visitorBuildingSearch.sendKeys(testData5.get("BuildingName"));   
+   	    	
+   	 }
+   	 public void clicksearchButton()throws Exception {
+   		 btn_building_visitor.click();
+   		 
+   	 }
+   	 
+   	 
+   //testing add building
+   	 public void clickaddBuildingButton()throws Exception {
+   		btn_add_building.click();
+   	 }
+   	 public void enterDataforAddBuilding(HashMap<String, String> testData5)throws Exception{
+   		 input_buildingName.sendKeys(testData5.get("BuildingName"));
+   	 }
+   	 public void clickAddButton()throws Exception {
+   		btn_add.click();
+   	 }
+   	 
+   	 
+   	 //testing update building
+   	 
+   	 //testing add floor
+   	 //testing update floor
     
-    
+	 //click login button
+	
     
     
 

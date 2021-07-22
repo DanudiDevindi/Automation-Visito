@@ -93,21 +93,21 @@ public class CheckInVisitorPageObjects extends TestBase {
 	
     //enter visitors data
     public void enterCheckInVisitorsData(HashMap<String, String> testData2 ) throws Exception {
-//      searchbleCombo_staffMember.sendKeys(testData2.get("staffMember"));
-//	     input_staffname.sendKeys(testData2.get("staffName"));
-//	    input_tpno.sendKeys(testData2.get("staffTP"));
-//	    input_designation.sendKeys(testData2.get("designation"));
-//	    input_employeeEmail.sendKeys(testData2.get("staffEmail"));
+        searchbleCombo_staffMember.sendKeys(testData2.get("staffMember"));
+	    input_staffname.sendKeys(testData2.get("staffName"));
+	    input_tpno.sendKeys(testData2.get("staffTP"));
+	    input_designation.sendKeys(testData2.get("designation"));
+	    input_employeeEmail.sendKeys(testData2.get("staffEmail"));
     	cm.selectDropdownData(select_building, testData2.get("building"));
-//    	cm.selectDropdownData(select_floor, testData2.get("floor"));
-//    	cm.selectDropdownData(select_purpose, testData2.get("purpose"));
-//    	input_nicPassport.sendKeys(testData2.get("visitorNIC"));
-//    	input_firstName.sendKeys(testData2.get("Firstname"));
-//    	input_lastName.sendKeys(testData2.get("Lastname"));
-//    	input_nicPassport.sendKeys(testData2.get("NIC"));
-//    	input_mobile.sendKeys(testData2.get("mobile"));
-//    	input_visitorEmail.sendKeys(testData2.get("email"));
-//    	cm.selectDropdownData(select_curd, testData2.get(""));
+    	cm.selectDropdownData(select_floor, testData2.get("floor"));
+    	cm.selectDropdownData(select_purpose, testData2.get("purpose"));
+    	input_nicPassport.sendKeys(testData2.get("visitorNIC"));
+    	input_firstName.sendKeys(testData2.get("Firstname"));
+    	input_lastName.sendKeys(testData2.get("Lastname"));
+    	input_nicPassport.sendKeys(testData2.get("NIC"));
+    	input_mobile.sendKeys(testData2.get("mobile"));
+    	input_visitorEmail.sendKeys(testData2.get("email"));
+    	cm.selectDropdownData(select_curd, testData2.get(""));
     	
     }
     

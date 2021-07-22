@@ -36,24 +36,8 @@ public class LoginPageObjects extends TestBase{
    	    	   input_password.sendKeys(testData.get("Password"));
    	    	
    	}
-     //Testing admin can login using valid username and password
-	 public void enterLoginDataAdmin() throws Exception {
-            input_username.sendKeys("admin");
-	    	input_password.sendKeys("123");
-	    	
-	 }
-	 
-	 //Testing receptionist can login using valid username and password
-	 public void enterLoginDataReceptionist() throws Exception {
-		 input_username.sendKeys("recep");
-		 input_password.sendKeys("123");
-		 
-	 }
-	 
-	
-	 
-	
-	//click login button
+    
+	 //click login button
 	 public void clickloginButton() {
 		 btn_loginbtn.click();
 	 }

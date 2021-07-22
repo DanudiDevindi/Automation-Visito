@@ -53,7 +53,6 @@ public class ExcelComponents {
 	
 	//get row count
 	public int getRowCount() {
-		
 		return sh.getLastRowNum();
 	}
 	
