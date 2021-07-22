@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">4</td><td class="num">53,959</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="4">VisitorManagement.EndToEndTest_visitorManagement</td><td><a href="#m0">visitorManagement_CheckInVisitors</a></td><td rowspan="2">1626937388979</td><td rowspan="2">248</td></tr><tr class="failedeven"><td><a href="#m1">visitorManagement_CheckInVisitors</a></td></tr><tr class="failedeven"><td><a href="#m2">visitorManagement_CheckedOutVisitors</a></td><td rowspan="1">1626937403827</td><td rowspan="1">239</td></tr><tr class="failedeven"><td><a href="#m3">visitorManagemet_Login</a></td><td rowspan="1">1626937426067</td><td rowspan="1">138</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">VisitorManagement.EndToEndTest_visitorManagement</td><td><a href="#m4">visitorManagement_CheckedOutVisitors</a></td><td rowspan="1">1626937396295</td><td rowspan="1">761</td></tr><tr class="passedeven"><td><a href="#m5">visitorManagemet_Login</a></td><td rowspan="2">1626937411248</td><td rowspan="2">548</td></tr><tr class="passedeven"><td><a href="#m6">visitorManagemet_Login</a></td></tr></tbody>
+</table>
+<h2>Test</h2><h3 id="m0">VisitorManagement.EndToEndTest_visitorManagement#visitorManagement_CheckInVisitors</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>null</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.util.HashMap.get(Object)&quot; because &quot;testData2&quot; is null
+	at pageObjects.CheckInVisitorPageObjects.enterCheckInVisitorsData(CheckInVisitorPageObjects.java:101)
+	at VisitorManagement.EndToEndTest_visitorManagement.visitorManagement_CheckInVisitors(EndToEndTest_visitorManagement.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">VisitorManagement.EndToEndTest_visitorManagement#visitorManagement_CheckInVisitors</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{purpose=Choose…, staffEmail=kamal@gmail.com, Lastname=Silva, mobile=245565665656, NIC=69152146545v, building=Abcd, Firstname=Nimal, staffMember=Kamal, staffName=kamal, staffTP=112453542, designation=PM, floor=bcd, visitorNIC=69152146545v, email=nimal@gmail.com, card=Choose…}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Exception: value is not presentin dropdown for webelement[[ChromeDriver: chrome on WINDOWS (90e186ed38274b04ec9236af1c877d53)] -&gt; xpath: //*[@id=&quot;building&quot;]]value to be selected isAbcd
+	at reusableComponents.CommonMethods.selectDropdownData(CommonMethods.java:17)
+	at pageObjects.CheckInVisitorPageObjects.enterCheckInVisitorsData(CheckInVisitorPageObjects.java:101)
+	at VisitorManagement.EndToEndTest_visitorManagement.visitorManagement_CheckInVisitors(EndToEndTest_visitorManagement.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">VisitorManagement.EndToEndTest_visitorManagement#visitorManagement_CheckedOutVisitors</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>null</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.util.HashMap.get(Object)&quot; because &quot;testData1&quot; is null
+	at pageObjects.CheckedOutVisitorsPageObjects.enterCheckedOutData(CheckedOutVisitorsPageObjects.java:38)
+	at VisitorManagement.EndToEndTest_visitorManagement.visitorManagement_CheckedOutVisitors(EndToEndTest_visitorManagement.java:40)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">VisitorManagement.EndToEndTest_visitorManagement#visitorManagemet_Login</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>null</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.util.HashMap.get(Object)&quot; because &quot;testData&quot; is null
+	at pageObjects.LoginPageObjects.enterLoginData(LoginPageObjects.java:35)
+	at VisitorManagement.EndToEndTest_visitorManagement.visitorManagemet_Login(EndToEndTest_visitorManagement.java:51)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">VisitorManagement.EndToEndTest_visitorManagement#visitorManagement_CheckedOutVisitors</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{VisitorNIC=15154564654V, visitDate=2017-05-06}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">VisitorManagement.EndToEndTest_visitorManagement#visitorManagemet_Login</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{userName=admin, Password=123}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">VisitorManagement.EndToEndTest_visitorManagement#visitorManagemet_Login</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{userName=recep, Password=123}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>
