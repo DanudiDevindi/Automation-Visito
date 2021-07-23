@@ -8,14 +8,9 @@
     <classes>
       <class name="VisitorManagement.EndToEndTest_visitorManagement">
         <methods>
+          <include name="VisitorManagement_DeleteFloor"/>
           <include name="setupMethod"/>
-          <include name="visitmanagement_ManageBuildings" invocation-numbers="1"/>
-          <include name="visitorManagement_CheckedInVisitors" invocation-numbers="2"/>
-          <include name="visitManagement_OverdueCheckedIn" invocation-numbers="1"/>
-          <include name="visitorManagement_CheckedOutVisitors" invocation-numbers="1"/>
-          <include name="visitorManagemet_Login" invocation-numbers="2"/>
-          <include name="visitorManagement_CheckInVisitors" invocation-numbers="0 1"/>
-          <include name="VisitorManagement_AddBuilding" invocation-numbers="0 1"/>
+          <include name="VisitorManagement_DeleteBuilding"/>
           <include name="cleanUp"/>
         </methods>
       </class> <!-- VisitorManagement.EndToEndTest_visitorManagement -->

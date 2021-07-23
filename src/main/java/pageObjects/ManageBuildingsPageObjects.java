@@ -29,8 +29,14 @@ public class ManageBuildingsPageObjects extends TestBase {
 	@FindBy(xpath="//*[@id=\"btn-building-edit\"]")
 	WebElement btn_building_Edit;
 	
+	@FindBy(xpath="//*[@id=\"building-tbl\"]/tbody/tr/td[6]/button[1]")
+	WebElement btn_EditRow1;
+	
 	@FindBy(xpath="//*[@id=\"building-tbl\"]/tbody/tr/td[6]/button[2]")
 	WebElement btn_building_delete;
+	
+	@FindBy(xpath="//*[@id=\"building-tbl\"]/tbody/tr/td[6]/button[2]")
+	WebElement btn_DeleteRow1;
 	
 	//add building modal
 	
@@ -54,8 +60,11 @@ public class ManageBuildingsPageObjects extends TestBase {
     @FindBy(xpath="//*[@id=\"editbtn\"]")
    	WebElement btn_floor_edit;
     
-    @FindBy(xpath="//*[@id=\"floor-delete-btn\"]")
-   	WebElement btn_floor_delete;
+    @FindBy(xpath="//*[@id=\"floor-tbl\"]/tbody/tr/td[3]/button[1]")
+   	WebElement btn_floor_editRow1;
+    
+    @FindBy(xpath="//*[@id=\"floor-tbl\"]/tbody/tr/td[3]/button[2]")
+   	WebElement btn_floor_deleteROW1;
     
     @FindBy(xpath="//*[@id=\"update-floor-btn\"]")
    	WebElement btn_floor_update;
@@ -67,6 +76,8 @@ public class ManageBuildingsPageObjects extends TestBase {
     @FindBy(xpath="//*[@id=\"building-updatebtn\"]")
    	WebElement btn_building_update;
     
+  
+  
   
     public ManageBuildingsPageObjects()throws Exception {
 		PageFactory.initElements(driver, this);
@@ -88,21 +99,73 @@ public class ManageBuildingsPageObjects extends TestBase {
    	 public void clickaddBuildingButton()throws Exception {
    		btn_add_building.click();
    	 }
-   	 public void enterDataforAddBuilding(HashMap<String, String> testData5)throws Exception{
-   		 input_buildingName.sendKeys(testData5.get("BuildingName"));
+   	 public void enterDataforAddBuilding(HashMap<String, String> testData6)throws Exception{
+   		 Thread.sleep(2000);
+   		 input_buildingName.sendKeys(testData6.get("BuildingName"));
+   		 
    	 }
    	 public void clickAddButton()throws Exception {
+   		 Thread.sleep(2000);
    		btn_add.click();
    	 }
    	 
    	 
    	 //testing update building
+   	 public void clickEditBuildingButton()throws Exception{
+   		 btn_EditRow1.click();
+   	 }
+   	 public void enterDataforUpdateBuilding(HashMap<String, String>testData7)throws Exception{
+   		 Thread.sleep(2000);
+   		 input_buildingNameUpdate.clear();
+   		 input_buildingNameUpdate.sendKeys(testData7.get("NewBuildingName"));
+   		 
+   	 }
+   	 public void clickupdateButton()throws Exception {
+   		 Thread.sleep(2000);
+   		  btn_building_update.click();
+   		 
+   	 }
+   	
    	 
    	 //testing add floor
+   	 public void clickAddFloorButton()throws Exception {
+   		 btn_floor.click();
+   		 
+   	 }
+   	 public void enterDataAddFloor(HashMap<String, String>testData8)throws Exception {
+   		 Thread.sleep(2000);
+   		 input_floorName.sendKeys(testData8.get("floorName"));
+   		 
+   	 }
+   	 public void clickaddButtonFloor() throws Exception {
+   		 Thread.sleep(2000);
+   		 btn_flooradd.click();
+   		 
+   	 }
    	 //testing update floor
-    
-	 //click login button
-	
+   	 public void clickEditFloorButton()throws Exception {
+   		 Thread.sleep(2000);
+   		 btn_floor_editRow1.click();
+     }
+   	 public void enterDataUpdateFloor(HashMap<String, String>testData9)throws Exception{
+   		 Thread.sleep(2000);
+   		 input_floorName.clear();
+   		 input_floorName.sendKeys(testData9.get("NewFloorname"));
+   	 }
+    public void clickUpdateFloorButton()throws Exception {
+    	Thread.sleep(2000);
+    	btn_floor_update.click();
+    	
+    }
+	 //delete building
+    public void clickDeleteBuildingButton()throws Exception {
+    	btn_DeleteRow1.click();
+    }
+   	 //delete floor
+	public void clickDeleteFloorButton()throws Exception {
+		Thread.sleep(2000);
+		btn_floor_deleteROW1.click();
+	}
     
     
 

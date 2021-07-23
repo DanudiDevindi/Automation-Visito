@@ -25,7 +25,7 @@ public class CheckedInVisitorsPageObjects extends TestBase {
 	@FindBy(xpath="//*[@id=\"CheckedInVisitor-table\"]/tbody[1]/tr[1]/td/button")
 	WebElement btn_firstRowCheckout;
 	
-	 public CheckedInVisitorsPageObjects() {
+	public CheckedInVisitorsPageObjects() {
 	   PageFactory.initElements(driver, this);
     }
 	
