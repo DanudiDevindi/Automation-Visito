@@ -11,6 +11,7 @@ import pageObjects.CheckedOutVisitorsPageObjects;
 import pageObjects.DashboardPageObjects;
 import pageObjects.LoginPageObjects;
 import pageObjects.ManageBuildingsPageObjects;
+import pageObjects.ManageStaffPageObjects;
 import pageObjects.OverdueCheckedInPageObjects;
 import reusableComponents.CommonMethods;
 
@@ -26,6 +27,7 @@ public class ObjectsRepo {
 	public static CheckedInVisitorsPageObjects checkedIn;
 	public static OverdueCheckedInPageObjects overdue;
 	public static ManageBuildingsPageObjects building;
+	public static ManageStaffPageObjects staff;
 	
 	public CommonMethods cm = new CommonMethods();
 

@@ -1,7 +1,6 @@
 package testBase;
 
-import java.util.concurrent.TimeUnit;
-
+import java.util.concurrent.TimeUnit;import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -16,6 +15,7 @@ import pageObjects.CheckedOutVisitorsPageObjects;
 import pageObjects.DashboardPageObjects;
 import pageObjects.LoginPageObjects;
 import pageObjects.ManageBuildingsPageObjects;
+import pageObjects.ManageStaffPageObjects;
 import pageObjects.OverdueCheckedInPageObjects;
 import reusableComponents.PropertiesOperations;
 
@@ -57,6 +57,8 @@ public class TestBase extends ObjectsRepo {
 			checkedIn = new CheckedInVisitorsPageObjects();
 			overdue = new OverdueCheckedInPageObjects();
 			building = new ManageBuildingsPageObjects();
+			staff = new ManageStaffPageObjects();
+					
 		}
 		
 		//ending test close window 
