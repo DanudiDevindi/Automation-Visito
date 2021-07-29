@@ -8,5 +8,5 @@
     <classes>
       <class name="VisitorManagement.EndToEndTest_visitorManagement"/>
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+ </test> <!-- Test -->
+  </suite> <!-- Suite -->

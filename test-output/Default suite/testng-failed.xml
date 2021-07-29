@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="VisitorManagement.EndToEndTest_visitorManagement">
+      <class name="VisitorManagement.Error_visitorManagement">
         <methods>
-          <include name="visitManagement_CheckVisitHistory"/>
+          <include name="ErrorMsg_staffMember"/>
           <include name="setupMethod"/>
-          <include name="visitorManagemet_AdminLogin"/>
-          <include name="visitorManagement_ReceptionistLogin"/>
+          <include name="verifyBuildgDropdownOptions"/>
+          <include name="verifyfloorDropdownOptions"/>
           <include name="cleanUp"/>
         </methods>
-      </class> <!-- VisitorManagement.EndToEndTest_visitorManagement -->
+      </class> <!-- VisitorManagement.Error_visitorManagement -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

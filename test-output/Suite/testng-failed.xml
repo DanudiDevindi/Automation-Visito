@@ -4,29 +4,15 @@
   <listeners>
     <listener class-name="reusableComponents.ListnersImplementation"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="Test1(failed)">
     <classes>
-      <class name="VisitorManagement.EndToEndTest_visitorManagement">
+      <class name="VisitorManagement.Error_visitorManagement">
         <methods>
-          <include name="VisitorManagement_DeleteFloor"/>
-          <include name="visitmanagement_ManageBuildings"/>
-          <include name="visitorManagement_AddStaff"/>
-          <include name="VisitorManagement_UpdateBuilding"/>
-          <include name="visitorManagement_CheckedOutVisitors"/>
-          <include name="visitorManagemet_Login"/>
-          <include name="visitorManagement_SearchStaff"/>
-          <include name="VisitorManagement_DeleteBuilding"/>
-          <include name="visitorManagement_CheckInVisitors"/>
-          <include name="VisitorManagement_AddFloor"/>
+          <include name="visitorManagement_CheckedOutVisitors" invocation-numbers="0 1"/>
           <include name="setupMethod"/>
-          <include name="VisitorManagement_UpdateFloor"/>
-          <include name="visitorManagement_CheckedInVisitors"/>
-          <include name="visitManagement_OverdueCheckedIn"/>
-          <include name="visitormanagement_EditStaff"/>
-          <include name="VisitorManagement_AddBuilding"/>
           <include name="cleanUp"/>
         </methods>
-      </class> <!-- VisitorManagement.EndToEndTest_visitorManagement -->
+      </class> <!-- VisitorManagement.Error_visitorManagement -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->

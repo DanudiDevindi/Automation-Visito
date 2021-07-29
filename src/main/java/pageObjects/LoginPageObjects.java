@@ -36,10 +36,11 @@ public class LoginPageObjects extends TestBase{
    	    	   input_password.sendKeys(testData.get("Password"));
    	    	
    	}
+  
     
 	 //click login button
 	 public void clickloginButton() {
-		 btn_loginbtn.click();
+		 btn_loginbtn.submit();;
 	 }
 	 
 

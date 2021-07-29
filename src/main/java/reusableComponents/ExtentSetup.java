@@ -28,7 +28,7 @@ public class ExtentSetup extends ObjectsRepo {
 		
 		sprkreport.config().setDocumentTitle("Document Title");
 		sprkreport.config().setTheme(Theme.DARK);
-		sprkreport.config().setReportName("ReportName");
+		sprkreport.config().setReportName("Visitor_Management");
 		
 		return extent;
 	}

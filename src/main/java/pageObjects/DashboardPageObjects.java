@@ -12,9 +12,9 @@ public class DashboardPageObjects extends TestBase {
 	@FindBy(xpath="//*[@id=\"main_navbar\"]/div[2]/perfect-scrollbar/div/div[1]/div[2]/ul[1]/li/a")
 	WebElement li_checkinvisitor;
 	
-//	@FindBy(xpath="/html/body/app-root/app-admin/div/div[2]/nav/div/div[2]/div/ul[2]/li/a")
-//	WebElement li_login;
-//	
+	@FindBy(xpath="/html/body/app-root/app-admin/div/div[2]/nav/div/div[2]/div/ul[2]/li/a")
+	WebElement li_login;
+	
 	@FindBy(xpath="//*[@id=\"main_navbar\"]/div[2]/perfect-scrollbar/div/div[1]/div[2]/ul[3]/li/a")
 	WebElement li_checkedOutVisitor;
 	
@@ -29,6 +29,11 @@ public class DashboardPageObjects extends TestBase {
 	
     @FindBy(xpath="//*[@id=\"main_navbar\"]/div[2]/perfect-scrollbar/div/div[1]/div[1]/ul[2]/li/a")
 	WebElement li_manageStaff;
+    
+    @FindBy(xpath="//*[@id=\"main_navbar\"]/div[2]/perfect-scrollbar/div/div[1]/div[1]/ul[3]/li/a")
+	WebElement li_mangeSystemUser;
+    
+  
 	
 	
 //constructor- use init element method
@@ -42,9 +47,9 @@ public class DashboardPageObjects extends TestBase {
     	li_checkinvisitor.click();
     }
     
-//    public void clickLoginLink() {
-//    	li_login.click();
-//    }
+    public void clickLoginLink() {
+    	li_login.click();
+    }
     
     public void clickChekedOutVisitors() {
     	li_checkedOutVisitor.click();
@@ -60,5 +65,8 @@ public class DashboardPageObjects extends TestBase {
     }
     public void clickManageStaff() {
     	li_manageStaff.click();
+    }
+    public void clickManageSystemUsers() {
+    	li_mangeSystemUser.click();
     }
 }
