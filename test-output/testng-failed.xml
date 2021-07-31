@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="reusableComponents.ListnersImplementation"/>
-  </listeners>
-  <test thread-count="5" name="Test1(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="VisitorManagement.Error_visitorManagement">
+      <class name="VisitorManagement.EndToEndTest_visitorManagement">
         <methods>
-          <include name="visitorManagement_CheckedOutVisitors" invocation-numbers="0 1"/>
+          <include name="VisitorManagement_DeleteFloor"/>
+          <include name="visitmanagement_ManageBuildings"/>
+          <include name="visitorManagement_AddStaff"/>
+          <include name="visitManagement_AddReceptionist"/>
+          <include name="VisitorManagement_UpdateBuilding"/>
+          <include name="visitorManagement_CheckedOutVisitors"/>
+          <include name="visitorManagemet_Login"/>
+          <include name="visitorManagement_SearchStaff"/>
+          <include name="VisitorManagement_DeleteBuilding"/>
+          <include name="visitorManagement_CheckInVisitors"/>
+          <include name="VisitorManagement_AddFloor"/>
           <include name="setupMethod"/>
+          <include name="VisitorManagement_UpdateFloor"/>
+          <include name="visitorManagement_CheckedInVisitorTable"/>
+          <include name="visitorManagement_CheckedInVisitors"/>
+          <include name="visitManagement_OverdueCheckedIn"/>
+          <include name="visitManagemet_UpdateReceptionist"/>
+          <include name="visitormanagement_EditStaff"/>
+          <include name="visitManagement_SearchSystemUser"/>
+          <include name="VisitorManagement_AddBuilding" invocation-numbers="0 1"/>
           <include name="cleanUp"/>
         </methods>
-      </class> <!-- VisitorManagement.Error_visitorManagement -->
+      </class> <!-- VisitorManagement.EndToEndTest_visitorManagement -->
     </classes>
-  </test> <!-- Test1(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

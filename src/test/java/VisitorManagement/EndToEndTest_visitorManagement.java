@@ -266,93 +266,93 @@ public class EndToEndTest_visitorManagement extends TestBase{
 		return ob;
 		 
 	 }
-//	//data provider method for checked out page
-//		@DataProvider (name="checkedOutData")
-//		 public Object [][] testDataSupplier1() throws Exception {
-//			Object[][] ob = new Object[exChekout.getRowCount()][1];
-//			for (int i = 1; i <=exChekout.getRowCount(); i++) {
-//				HashMap<String, String> testData1 =exChekout.getTestDataInMap(i);
-//				ob[i-1][0] = testData1;
-//			}
-//			
-//			return ob;
-//			 
-//		 }
-//		//data provider method for check in visitor page
-//				@DataProvider (name="checkInVisitor")
-//				 public Object [][] testDataSupplier2() throws Exception {
-//					Object[][] ob = new Object[exChekIn.getRowCount()][1];
-//					for (int i = 1; i <=exChekIn.getRowCount(); i++) {
-//						HashMap<String, String> testData2 =exChekIn.getTestDataInMap(i);
-//						ob[i-1][0] = testData2;
-//					}
-//					
-//					return ob;
-//					 
-//				 }
-//	  //data provider method for checked in visitor page
-//       @DataProvider (name="checkedInVisitor")
-//	   public Object [][] testDataSupplier3() throws Exception {
-//		 Object[][] ob = new Object[exChekedIn.getRowCount()][1];
-//			for (int i = 1; i <=exChekedIn.getRowCount(); i++) {
-//				HashMap<String, String> testData3 =exChekedIn.getTestDataInMap(i);
-//				ob[i-1][0] = testData3;
-//			}
-//					
-//			return ob;
-//					 
-//			}
-//     
-//     //data provider method for overdue checked in visitor page
-//      @DataProvider (name="overduecheckedInVisitor")
-//	   public Object [][] testDataSupplier4() throws Exception {
-//		 Object[][] ob = new Object[exOverdue.getRowCount()][1];
-//			for (int i = 1; i <=exOverdue.getRowCount(); i++) {
-//				HashMap<String, String> testData4 =exOverdue.getTestDataInMap(i);
-//				ob[i-1][0] = testData4;
-//			}
-//					
-//			return ob;
-//					 
-//			}
-//       
-//     //data provider method for manage building page
-//       @DataProvider (name="manageBuildings")
-//	   public Object [][] testDataSupplier5() throws Exception {
-//		 Object[][] ob = new Object[exBuilding.getRowCount()][1];
-//			for (int i = 1; i <=exBuilding.getRowCount(); i++) {
-//				HashMap<String, String> testData5 =exBuilding.getTestDataInMap(i);
-//				ob[i-1][0] = testData5;
-//			}
-//					
-//			return ob;
-//					 
-//			}
-//       
-//     //data provider method for manage staff page
-//       @DataProvider (name="managestaff")
-//	   public Object [][] testDataSupplier6() throws Exception {
-//		 Object[][] ob = new Object[exStaff.getRowCount()][1];
-//			for (int i = 1; i <=exStaff.getRowCount(); i++) {
-//				HashMap<String, String> testData6 =exStaff.getTestDataInMap(i);
-//				ob[i-1][0] = testData6;
-//			}
-//					
-//			return ob;
-//					 
-//			}
-//       //data provider method for manage system user page
-//       @DataProvider (name="managesystemuser")
-//	   public Object [][] testDataSupplier7() throws Exception {
-//		 Object[][] ob = new Object[exsysuser.getRowCount()][1];
-//			for (int i = 1; i <=exsysuser.getRowCount(); i++) {
-//				HashMap<String, String> testData7 =exsysuser.getTestDataInMap(i);
-//				ob[i-1][0] = testData7;
-//			}
-//					
-//			return ob;
-//					 
-//			}
+	//data provider method for checked out page
+		@DataProvider (name="checkedOutData")
+		 public Object [][] testDataSupplier1() throws Exception {
+			Object[][] ob = new Object[exChekout.getRowCount()][1];
+			for (int i = 1; i <=exChekout.getRowCount(); i++) {
+				HashMap<String, String> testData1 =exChekout.getTestDataInMap(i);
+				ob[i-1][0] = testData1;
+			}
+			
+			return ob;
+			 
+		 }
+		//data provider method for check in visitor page
+				@DataProvider (name="checkInVisitor")
+				 public Object [][] testDataSupplier2() throws Exception {
+					Object[][] ob = new Object[exChekIn.getRowCount()][1];
+					for (int i = 1; i <=exChekIn.getRowCount(); i++) {
+						HashMap<String, String> testData2 =exChekIn.getTestDataInMap(i);
+						ob[i-1][0] = testData2;
+					}
+					
+					return ob;
+					 
+				 }
+	  //data provider method for checked in visitor page
+       @DataProvider (name="checkedInVisitor")
+	   public Object [][] testDataSupplier3() throws Exception {
+		 Object[][] ob = new Object[exChekedIn.getRowCount()][1];
+			for (int i = 1; i <=exChekedIn.getRowCount(); i++) {
+				HashMap<String, String> testData3 =exChekedIn.getTestDataInMap(i);
+				ob[i-1][0] = testData3;
+			}
+					
+			return ob;
+					 
+			}
+     
+     //data provider method for overdue checked in visitor page
+      @DataProvider (name="overduecheckedInVisitor")
+	   public Object [][] testDataSupplier4() throws Exception {
+		 Object[][] ob = new Object[exOverdue.getRowCount()][1];
+			for (int i = 1; i <=exOverdue.getRowCount(); i++) {
+				HashMap<String, String> testData4 =exOverdue.getTestDataInMap(i);
+				ob[i-1][0] = testData4;
+			}
+					
+			return ob;
+					 
+			}
+       
+     //data provider method for manage building page
+       @DataProvider (name="manageBuildings")
+	   public Object [][] testDataSupplier5() throws Exception {
+		 Object[][] ob = new Object[exBuilding.getRowCount()][1];
+			for (int i = 1; i <=exBuilding.getRowCount(); i++) {
+				HashMap<String, String> testData5 =exBuilding.getTestDataInMap(i);
+				ob[i-1][0] = testData5;
+			}
+					
+			return ob;
+					 
+			}
+       
+     //data provider method for manage staff page
+       @DataProvider (name="managestaff")
+	   public Object [][] testDataSupplier6() throws Exception {
+		 Object[][] ob = new Object[exStaff.getRowCount()][1];
+			for (int i = 1; i <=exStaff.getRowCount(); i++) {
+				HashMap<String, String> testData6 =exStaff.getTestDataInMap(i);
+				ob[i-1][0] = testData6;
+			}
+					
+			return ob;
+					 
+			}
+       //data provider method for manage system user page
+       @DataProvider (name="managesystemuser")
+	   public Object [][] testDataSupplier7() throws Exception {
+		 Object[][] ob = new Object[exsysuser.getRowCount()][1];
+			for (int i = 1; i <=exsysuser.getRowCount(); i++) {
+				HashMap<String, String> testData7 =exsysuser.getTestDataInMap(i);
+				ob[i-1][0] = testData7;
+			}
+					
+			return ob;
+					 
+			}
        
 	
 	
